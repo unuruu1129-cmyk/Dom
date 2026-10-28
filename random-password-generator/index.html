@@ -5,9 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password generator</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
 
-  <body>
-    Random password generator
+  <body
+    class="min-h-screen min-w-[1000px] bg-[#101b16] font-sans text-[#f0fdf4]"
+  >
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header
+        class="flex h-24 shrink-0 items-center justify-between border-b border-[#86efac]/10"
+      >
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#86efac]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#86efac] transition-colors hover:border-[#86efac]/35 hover:bg-[#86efac]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#86efac] motion-reduce:transition-none"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span
+          class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#86efac]/65"
+          >The everyday collection / 02</span
+        >
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div
+          class="flex flex-col justify-center items-center h-[520px] w-[571px] bg-[#192B22] border border-[#FFFFFF1A] rounded-3xl"
+        >
+          <div class="flex flex-col">
+            <div
+              class="h-11 w-11 bg-[#4ADE8026] flex justify-center items-center rounded-xl"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 23 23"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-lock-keyhole preview-icon text-[#86EFAC]"
+              >
+                <circle cx="12" cy="16" r="1" />
+                <rect x="3" y="10" width="18" height="12" rx="2" />
+                <path d="M7 10V7a5 5 0 0 1 10 0v3" />
+              </svg>
+            </div>
+            <span class="text-[28px] text-[#F0FDF4]">Password generator</span>
+            <span class="text-[14px] text-[#A4B9AD]"
+              >A strong password. One click away.</span
+            >
+            <span class="text-xs text-[#A4B9AD]">Your password</span>
+          </div>
+          <div
+            class="h-[64px] w-[448px] bg-[#101B16] flex items-center justify-between border border-[#FFFFFF1A] rounded-2xl"
+          >
+          <span class="text-lg text-[#BBF7D0]">K9#mQ2&xR7!vN4@p</span>
+          <button class="h-[15px] w-[31px] bg-[#FFFFFF0D] rounded-xl text-xs text-[#DCECE2] px-[12px] py-[8px]">Copy</button>  
+        </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
