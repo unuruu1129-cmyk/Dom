@@ -8,47 +8,27 @@
     <script src="index.js" defer></script>
   </head>
 
-  <body
-    class="min-h-screen min-w-[1000px] bg-[#101b16] font-sans text-[#f0fdf4]"
-  >
+  <body class="min-h-screen min-w-[1000px] bg-[#101b16] font-sans text-[#f0fdf4]">
     <div class="mx-auto flex min-h-screen w-[920px] flex-col">
-      <header
-        class="flex h-24 shrink-0 items-center justify-between border-b border-[#86efac]/10"
-      >
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#86efac]/10">
         <nav>
           <a
             href="../index.html"
             class="inline-flex items-center gap-2 rounded-full border border-[#86efac]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#86efac] transition-colors hover:border-[#86efac]/35 hover:bg-[#86efac]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#86efac] motion-reduce:transition-none"
           >
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 12H5m7-7-7 7 7 7" />
             </svg>
             Back to projects
           </a>
         </nav>
-        <span
-          class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#86efac]/65"
-          >The everyday collection / 02</span
-        >
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#86efac]/65">The everyday collection / 02</span>
       </header>
 
       <div class="flex flex-1 items-center justify-center py-10">
-        <div
-          class="flex flex-col p-9 w-[571px] bg-[#192B22] border border-[#FFFFFF1A] rounded-3xl"
-        >
+        <div class="flex flex-col p-9 w-[571px] bg-[#192B22] border border-[#FFFFFF1A] rounded-3xl">
           <div class="flex flex-col pb-3">
-            <div
-              class="h-11 w-11 bg-[#4ADE8026] flex justify-center items-center rounded-xl"
-            >
+            <div class="h-11 w-11 bg-[#4ADE8026] flex justify-center items-center rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -67,49 +47,39 @@
               </svg>
             </div>
             <span class="text-[28px] text-[#F0FDF4] pt-6">Password generator</span>
-            <span class="text-[14px] text-[#A4B9AD]"
-              >A strong password. One click away.</span
-            >
+            <span class="text-[14px] text-[#A4B9AD]">A strong password. One click away.</span>
             <span class="text-xs text-[#A4B9AD] pt-8">Your password</span>
           </div>
-          <div
-            class="h-[64px] w-full bg-[#101B16] flex items-center justify-between border border-[#FFFFFF1A] rounded-2xl px-3"
-          >
-            <span class="text-lg text-[#BBF7D0]">K9#mQ2&xR7!vN4@p</span>
+          <div class="h-[64px] w-full bg-[#101B16] flex items-center justify-between border border-[#FFFFFF1A] rounded-2xl px-3">
+            <span id="show-generated-password" class="text-lg text-[#BBF7D0]"></span>
             <button
-              class="flex justify-center items-center bg-[#FFFFFF0D] rounded-xl px-3 py-2"
+              type="button"
+              id="copy-generated-password"
+              class="flex cursor-pointer text-xs text-[#DCECE2] justify-center items-center bg-[#FFFFFF0D] rounded-xl px-3 py-2 text-[#DCECE2] hover:bg-white/10"
             >
-              <span class="text-xs text-[#DCECE2]">Copy</span>
+              Copy
             </button>
           </div>
-          <div class="text-xs text-[#A4B9AD] font-normal pt-3">
-            Uses letters, numbers, and symbols.
-          </div>
+          <div id="message" class="text-xs text-[#A4B9AD] font-normal pt-3">Uses letters, numbers, and symbols.</div>
           <div class="flex flex-row justify-between pt-[29.5px]">
             <div class="text-sm text-[#DCECE2]">Password length</div>
-            <div class="text-lg text-[#86EFAC]">16</div>
+            <div id="password-length-output" class="text-lg text-[#86EFAC]">16</div>
           </div>
           <div class="">
-            <input
-              type="range"
-              min="8"
-              max="24"
-              value="16"
-              class="w-112 accent-[#4ADE80] pl-9 pr -[34px]"
-            />
+            <input id="password-length-range-input" type="range" min="8" max="24" value="16" class="w-full accent-[#4ADE80]" />
           </div>
           <div class="flex flex-row justify-between text-xs text-[#8AA294] pb-7">
             <div>8</div>
             <div>24</div>
           </div>
-          <div
-            class="h-12 w-full bg-[#4ADE80] rounded-xl flex justify-center items-center text-sm text-[#102418] font-semibold mb-5"
+          <button
+            type="button"
+            id="generate-password-button"
+            class="h-12 w-full bg-[#4ADE80] cursor-pointer rounded-xl flex justify-center items-center text-sm text-[#102418] font-semibold mb-5 translate duration-300 ease-in active:scale-90 hover:bg-[#86efac]"
           >
             Generate password
-          </div>
-          <div class="text-xs text-[#8AA294] font-normal pl-[114px]">
-            Generated in your browser. Never saved.
-          </div>
+          </button>
+          <div class="text-xs text-[#8AA294] font-normal pl-[114px]">Generated in your browser. Never saved.</div>
         </div>
       </div>
     </div>
