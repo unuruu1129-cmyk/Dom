@@ -16,16 +16,7 @@
             href="../index.html"
             class="inline-flex items-center gap-2 rounded-full border border-[#c5d9bd]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#c5d9bd] transition-colors hover:border-[#c5d9bd]/35 hover:bg-[#c5d9bd]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] motion-reduce:transition-none"
           >
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 12H5m7-7-7 7 7 7" />
             </svg>
             Back to projects
@@ -33,10 +24,76 @@
         </nav>
         <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#c5d9bd]/65">The everyday collection / 04</span>
       </header>
-      
-<div class="flex flex-1 items-center justify-center py-10">
-       
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="w-155 bg-[#19231E8C] border border-[#FFFFFF26] rounded-3xl py-10 pl-10 pr-[38px]">
+          <div class="flex justify-between">
+            <div class="flex justify-center items-center bg-[#B5CBB21A] rounded-xl h-11 w-11">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="23"
+                height="23"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-timer preview-icon text-[#C5D9BD]"
+              >
+                <line x1="10" x2="14" y1="2" y2="2" />
+                <line x1="12" x2="15" y1="14" y2="11" />
+                <circle cx="12" cy="14" r="8" />
+              </svg>
+            </div>
+            <div id="state" class="flex justify-center items-center w-[62px] h-[29px] border border-[#C5D9BD26] rounded-3xl text-xs text-[#C5D9BD] font-medium bg-[#B5CBB20D]">Ready</div>
+          </div>
+          <div class="text-[40px] text-[#F0FDF4] pt-7 font-normal">Stopwatch</div>
+          <div class="text-[14px] text-[#A4B9AD] pt-2">Make time for what matters.</div>
+          <div class="h-[158px] flex flex-row items-center justify-around border-y border-[#B5CBB226] mt-9 mb-8">
+            <div class="flex flex-col items-center">
+              <div id="hours" class="text-[56px] font-mono text-[#EDF3E8]">00</div>
+              <div class="text-[9px] text-[#9BAD9E] font-medium tracking-widest">HOURS</div>
+            </div>
+            <div class="text-[40px] text-[#5C7161] font-mono">:</div>
+            <div class="flex flex-col items-center">
+              <div id="minuts" class="text-[56px] font-mono text-[#EDF3E8]">00</div>
+              <div class="text-[9px] text-[#9BAD9E] font-medium tracking-widest">MINUTES</div>
+            </div>
+            <div class="text-[40px] text-[#5C7161] font-mono">:</div>
+            <div class="flex flex-col items-center">
+              <div id="seconds" class="text-[56px] font-mono text-[#EDF3E8]">00</div>
+              <div class="text-[9px] text-[#9BAD9E] font-medium tracking-widest">SECONDS</div>
+            </div>
+          </div>
+          <div class="flex flex-row justify-between">
+            <button
+              type="button"
+              id="start-button"
+              class="cursor-pointer h-12 w-[258px] flex justify-center items-center bg-[#B5CBB2] rounded-xl text-sm text-[#102418] transition-colors enabled:hover:bg-[#c5d9bd] disabled:cursor-not-allowed disabled:opacity-35"
+            >
+              Start
+            </button>
+            <button
+              type="button"
+              disabled
+              id="stop-button"
+              class="cursor-pointer h-12 w-[129px] flex justify-center items-center bg-[#232927] border border-[#FFFFFF1A] rounded-xl text-sm text-[#DCE5DF] transition-colors enabled:hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-35"
+            >
+              Pause
+            </button>
+            <button
+              type="button"
+              disabled
+              id="reset-button"
+              class="cursor-pointer h-12 w-[129px] flex justify-center items-center bg-[#171D1B] border border-[#FFFFFF26] rounded-xl text-sm text-[#A4B9AD] transition-colors enabled:hover:bg-white/5 enabled:hover:text-[#f0fdf4] disabled:cursor-not-allowed disabled:opacity-35"
+            >
+              Reset
+            </button>
+          </div>
+          <div class="text-xs text-[#8AA294] tracking-wider font-light pl-[162px] pt-5">A moment of focus. At your own pace.</div>
+        </div>
       </div>
     </div>
   </body>
-</html> 
+</html>
