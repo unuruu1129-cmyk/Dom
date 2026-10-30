@@ -27,8 +27,18 @@
       </header>
 
       <div class="flex flex-col flex-1 items-center justify-center py-10 bg-[#F5F3EE]">
-        <div class="text-xs text-[#7B887C] pb-8  font-semibold tracking-widest">A MOMENT IN TIME</div>
-        <div class="h-98 w-98 border-[16px] border-[#D8DBD1] rounded-full bg-[#FCFBF7]"></div>
+        <div class="text-xs text-[#7B887C] pb-8 font-semibold tracking-widest">A MOMENT IN TIME</div>
+        <div class="relative aspect-square w-[360px] border-[16px] border-[#D8DBD1] rounded-full bg-[#FCFBF7]">
+          <div id="markers" class="absolute inset-0"></div>
+          <div id="numbers" class="absolute inset-0 font-serif text-xl sm:text-2xl"></div>
+          <div id="hour-hand" class="absolute bottom-1/2 -translate-x-1/2 left-1/2 z-10 h-[27%] w-[7px] origin-bottom bg-[#253B35] rounded-xl"></div>
+          <div id="minute-hand" class="absolute bottom-1/2 -translate-x-1/2 left-1/2 z-20 h-[34%] w-[4px] origin-bottom bg-[#253B35] rounded-xl"></div>
+          <div id="second-hand" class="absolute bottom-1/2 left-1/2 z-30 h-[39%] w-[2px] -translate-x-1/2 origin-bottom rounded-full bg-[#C47E57]">
+            <div class="absolute top-full left-0 h-[24px] w-full rounded-full bg-[#C47E57]"></div>
+          </div>
+          <div class="absolute left-1/2 top-1/2 z-40 h-[12px] w-[12px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[4px] border-[#FCFBF7] bg-[#C47E57]"></div>
+          <div class="absolute left-1/2 top-[28%] -translate-x-1/2 text-[9px] font-semibold tracking-widest">SWISS</div>
+        </div>
       </div>
 
       <footer class="flex h-16 shrink-0 items-center justify-between border-t border-[#253b35]/10 text-[10px] text-[#748174]">
