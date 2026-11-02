@@ -5,8 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reaction time</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
-  <body>
-    Reaction time game
+  <body class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]">
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10">
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-colors hover:border-[#d9f99d]/35 hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65">The everyday collection / 06</span>
+      </header>
+
+      <div class="flex flex-1 items-center justify-center py-10">
+        <div class="w-[576px] p-8 bg-[#18181B] border border-[#27272A] rounded-2xl">
+          <div class="text-2xl font-semibold text-[#F4F4F5]">Reaction time</div>
+          <div class="text-sm text-[#A1A1AA] pt-2">Wait for green, then click as quickly as you can.</div>
+          <div class="h-64 flex flex-col justify-center items-center text-[#F4F4F5] bg-[#27272A] rounded-2xl my-6">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-target preview-icon"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </div>
+            <div class="text-2xl font-semibold text-[#F4F4F5]">Ready when you are</div>
+            <div class="text-sm text-[#F4F4F5] pt-3">Click to start</div>
+          </div>
+          <div class="flex flex-row gap-3 mb-5">
+            <div class="flex flex-col justify-center items-center w-[250px] bg-[#27272A] rounded-xl">
+              <div class="text-2xl text-[#D9F99D]">—</div>
+              <div class="text-xs text-[#A1A1AA]">Last attempt</div>
+            </div>
+            <div class="flex flex-col justify-center items-center h-21 w-[250px] bg-[#27272A] rounded-xl">
+              <div class="text-2xl text-[#D9F99D]">—</div>
+              <div class="text-xs text-[#A1A1AA]">Best this session</div>
+            </div>
+          </div>
+          <div class="text-xs text-[#A1A1AA] text-center">Click the panel, or focus it and press Space or Enter. Clicking before green ends the attempt.</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
