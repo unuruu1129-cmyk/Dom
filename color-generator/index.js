@@ -30,7 +30,7 @@ const families = [
 ];
 
 let selectedFamilies = ["red", "amber", "emerald", "sky", "violet", "pink"].map((name) => families.find((family) => name === family.name));
-const hslToHex = (hue, saturation, light) => {
+const hslToHex = ({ hue, saturation, light }) => {
   const l = light / 100;
   const s = saturation / 100;
   const amplitude = s * Math.min(l, 1 - l);
@@ -45,13 +45,25 @@ const hslToHex = (hue, saturation, light) => {
 
   return `#${channel(0)}${channel(8)}${channel(4)}`.toUpperCase();
 };
+
+colors.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-hex]");
+  if (!button) return;
+  navigator.clipboard.writeText(button.dataset.hex);
+  statusElement.textContent = `${button.dataset.hex} is copied.`;
+  setTimeout(() => {
+    statusElement.textContent = "6 palettes · 60 shades. Click to copy a HEX background color.";
+  }, 2000);
+});
+
 const renderColors = () => {
+  colors.innerHTML = "";
   selectedFamilies.forEach(({ name, hue, saturation }) => {
     const colorButtons = shades
       .map((shade, index) => {
-        const hex = hslToHex({ hue, saturation, lightness: lightness[index] });
-        return `<button type="button" class="group min-w-0 cursor-pointer rounded-xl text-center">
-                <span style="background-color: ${hex}" class="block h-16 rounded-xl transition gruop-hover: -translate-y-1 gruop-hover"></span>
+        const hex = hslToHex({ hue, saturation, light: lightness[index] });
+        return `<button type="button" data-hex="${hex}" class="group min-w-0 cursor-pointer rounded-xl text-center">
+                <span style="background-color: ${hex}" class="block h-16 rounded-xl transition group-hover:-translate-y-[6px]"></span>
                 <span class="mt-2 block text-xs font-medium tabular-nums text-zinc-300">${shade}</span>
                 <span class="mt-1 block pb-1 font-mono text-[9px] text-zinc-400">${hex}</span>
               </button>`;
@@ -59,10 +71,21 @@ const renderColors = () => {
       .join("");
     const template = `
     <div>
-     <h2 class="mb-3 text-sm font-semibold capitalize text-zinc-200">${family.name}</h2>
+     <h2 class="mb-3 text-sm font-semibold capitalize text-zinc-200">${name}</h2>
      <div class="grid grid-cols-5 gap-2 sm:gap-3 lg:grid-cols-10">${colorButtons}</div>
     </div>`;
     colors.innerHTML += template;
   });
 };
+shufflePalettes.addEventListener("click", () => {
+  const remaining = [...families];
+  selectedFamilies = [];
+  for (let i = 0; i < 5; i++) {
+    const randomIndex = Math.floor(Math.random() * remaining.length);
+    selectedFamilies.push(remaining[randomIndex]);
+    remaining.splice(randomIndex, 1);
+    renderColors();
+  }
+  statusElement.textContent = "6 palettes · 60 shades. Click to copy a HEX background color.";
+});
 renderColors();
