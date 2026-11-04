@@ -28,34 +28,18 @@
         <div class="w-[576px] p-8 bg-[#18181B] border border-[#27272A] rounded-2xl">
           <div class="text-2xl font-semibold text-[#F4F4F5]">Reaction time</div>
           <div class="text-sm text-[#A1A1AA] pt-2">Wait for green, then click as quickly as you can.</div>
-          <button type="button" class="h-64 w-full cursor-pointer flex flex-col justify-center items-center text-[#F4F4F5] bg-[#27272A] rounded-2xl my-6">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-circle-letter-o preview-icon"
-              >
-                <circle cx="12" cy="12" r="6" />
-                <circle cx="12" cy="12" r="10" />
-              </svg>
-            </div>
-            <div class="text-2xl font-semibold text-[#F4F4F5] pt-3">Ready when you are</div>
-            <div class="text-sm text-[#F4F4F5] pt-3">Click to start</div>
+          <button id="start-button" class="h-64 w-full cursor-pointer flex flex-col justify-center items-center text-[#F4F4F5] bg-[#27272A] rounded-2xl my-6">
+            <p id="icon" class="text-4xl">◎</p>
+            <div id="status" class="text-2xl font-semibold pt-3">Ready when you are</div>
+            <div id="instruction" class="text-sm pt-3">Click to start</div>
           </button>
           <div class="flex flex-row gap-3 mb-5">
             <div class="flex flex-col justify-center items-center w-[250px] bg-[#27272A] rounded-xl">
-              <div class="text-2xl text-[#D9F99D]">—</div>
+              <div id="last-attempt" class="text-2xl text-[#D9F99D]">—</div>
               <div class="text-xs text-[#A1A1AA]">Last attempt</div>
             </div>
             <div class="flex flex-col justify-center items-center h-21 w-[250px] bg-[#27272A] rounded-xl">
-              <div class="text-2xl text-[#D9F99D]">—</div>
+              <div id="best-time" class="text-2xl text-[#D9F99D]">—</div>
               <div class="text-xs text-[#A1A1AA]">Best this session</div>
             </div>
           </div>
