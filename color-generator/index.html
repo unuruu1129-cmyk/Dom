@@ -26,13 +26,13 @@
       </header>
 
       <div class="flex flex-1 justify-center py-10">
-        <div class="flex flex-col px-25">
-          <div class="w-310 h-26 flex flex-row justify-between">
+        <main class="flex flex-col px-25">
+          <header class="w-310 h-26 flex flex-row justify-between">
             <div>
               <div class="text-3xl text-[#F4F4F5] font-semibold">Color palettes.</div>
-              <div class="text-sm text-[#A1A1AA] pt-3 font-light">Generated shades with Tailwind color names. Click a shade to copy its HEX background color.</div>
+              <div class="text-sm text-[#A1A1AA] mt-3 font-light">Generated shades with Tailwind color names. Click a shade to copy its HEX background color.</div>
             </div>
-            <div class="h-12 w-[186px] flex flex-row justify-center items-center rounded-2xl bg-[#D9F99D] text-[#09090B] text-sm font-semibold">
+            <button type="button" id="shuffle-colors" class="h-12 w-[186px] flex flex-row justify-center items-center rounded-2xl bg-[#D9F99D] text-[#09090B] text-sm font-semibold">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -52,27 +52,19 @@
                   <path d="M8 16H3v5" />
                 </svg>
               </div>
-              <button type="button" class="pl-2">Shuffle palettes</button>
-            </div>
-          </div>
+              <div class="pl-2">Shuffle palettes</div>
+            </button>
+          </header>
           <div class="h-[55px] flex flex-row justify-between items-center text-xs text-[#A1A1AA] font-medium">
             <div>100 → 950 · LIGHT TO DARK</div>
-            <div>Ready to explore.</div>
+            <div id="status">Ready to explore.</div>
           </div>
-          <div class="flex flex-col justify-center">
-            <div class="flex flex-col">
-              <div class="text-sm text-[#E4E4E7] font-semibold">Red</div>
-              <div>
-                <div class="flex flex-col pt-3">
-                  <div class="h-16 w-[113.2px] rounded-2xl bg-[#FDE3E3]"></div>
-                  <span class="text-xs text-[#D4D4D8] font-medium pt-2">100</span>
-                  <span class="text-[9px] text-[#A1A1AA] font-light">#FDE3E3</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <section id="colors" class="space-y-7"></section>
+        </main>
       </div>
     </div>
   </body>
 </html>
+
+
+
