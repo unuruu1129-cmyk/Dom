@@ -80,12 +80,12 @@ const renderColors = () => {
 shufflePalettes.addEventListener("click", () => {
   const remaining = [...families];
   selectedFamilies = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     const randomIndex = Math.floor(Math.random() * remaining.length);
     selectedFamilies.push(remaining[randomIndex]);
     remaining.splice(randomIndex, 1);
-    renderColors();
   }
+  renderColors();
   statusElement.textContent = "6 palettes · 60 shades. Click to copy a HEX background color.";
 });
 renderColors();
